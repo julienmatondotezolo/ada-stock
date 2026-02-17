@@ -1,0 +1,164 @@
+{
+  "app": {
+    "title": "AdaStock",
+    "subtitle": "L'Osteria Deerlijk",
+    "addProduct": "Product Toevoegen",
+    "dashboard": "Dashboard",
+    "products": "Producten"
+  },
+  "product": {
+    "name": "Productnaam",
+    "category": "Categorie",
+    "quantity": "Hoeveelheid",
+    "minStock": "Min Voorraad",
+    "unit": "Eenheid",
+    "lastUpdated": "Laatst bijgewerkt",
+    "actions": "Acties",
+    "status": "Status",
+    "currentStock": "Huidige voorraad",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "edit": "Bewerken",
+    "editQuantity": "Aantal Bewerken",
+    "editProduct": "Product Bewerken",
+    "deleteProduct": "Product Verwijderen",
+    "updateProduct": "Product Bijwerken",
+    "delete": "Verwijderen",
+    "add": "Toevoegen",
+    "remove": "Verwijderen",
+    "increase": "Verhogen",
+    "decrease": "Verlagen",
+    "clickToEdit": "Klik om te bewerken",
+    "minimumStock": "Minimale Voorraad"
+  },
+  "stock": {
+    "outOfStock": "Niet op voorraad",
+    "lowStock": "Lage voorraad",
+    "goodStock": "Voldoende voorraad",
+    "urgent": "URGENT",
+    "low": "LAAG",
+    "good": "GOED",
+    "out": "UIT"
+  },
+  "stats": {
+    "totalProducts": "Totaal producten",
+    "lowStockProducts": "Lage voorraad",
+    "outOfStockProducts": "Niet op voorraad",
+    "updatedToday": "Vandaag bijgewerkt",
+    "showing": "{count} producten weergegeven",
+    "showingFiltered": "{filtered} van {total} producten weergegeven"
+  },
+  "search": {
+    "placeholder": "Zoek producten...",
+    "noResults": "Geen producten gevonden",
+    "tryAdjusting": "Probeer je zoekcriteria of filters aan te passen.",
+    "clearFilters": "Alle filters wissen"
+  },
+  "filters": {
+    "allCategories": "Alle categorieën",
+    "allStock": "Alle voorraad",
+    "category": "Categorie",
+    "activeFilters": "Actieve filters:",
+    "search": "Zoeken",
+    "clear": "Alles wissen"
+  },
+  "view": {
+    "list": "Lijst",
+    "cards": "Kaarten",
+    "listView": "Lijstweergave",
+    "cardView": "Kaartweergave"
+  },
+  "categories": {
+    "vegetables": "Groenten",
+    "dairy": "Zuivelproducten",
+    "dryGoods": "Droge waren",
+    "oils": "Oliën",
+    "herbs": "Kruiden",
+    "meat": "Vlees",
+    "seafood": "Zeevruchten",
+    "beverages": "Dranken",
+    "spices": "Specerijen"
+  },
+  "units": {
+    "kg": "kg",
+    "g": "g",
+    "L": "L",
+    "ml": "ml",
+    "pcs": "st",
+    "bunch": "bosje",
+    "pack": "pak",
+    "box": "doos",
+    "bottle": "fles",
+    "can": "blik",
+    "piece": "stuk",
+    "pieces": "stuks"
+  },
+  "alerts": {
+    "urgentAttention": "Dringende aandacht vereist",
+    "noProductsUpdated": "Geen producten vandaag bijgewerkt",
+    "recentActivity": "Recente activiteit"
+  },
+  "time": {
+    "today": "vandaag",
+    "updated": "Bijgewerkt",
+    "min": "Min"
+  },
+  "dashboard": {
+    "categoriesOverview": "Categorieën overzicht",
+    "recentActivity": "Recente activiteit",
+    "updatedToday": "Vandaag bijgewerkt",
+    "noProductsUpdated": "Geen producten vandaag bijgewerkt",
+    "products": "producten",
+    "more": "meer..."
+  },
+  "modal": {
+    "addNewProduct": "Nieuw product toevoegen",
+    "productName": "Productnaam",
+    "productNamePlaceholder": "bijv: Verse tomaten",
+    "productNameRequired": "Productnaam is vereist",
+    "categoryRequired": "Categorie is vereist",
+    "selectCategory": "Selecteer een categorie",
+    "currentQuantity": "Huidige hoeveelheid",
+    "validQuantityRequired": "Geldige hoeveelheid is vereist",
+    "minStockLevel": "Minimum voorraadniveau",
+    "validMinStockRequired": "Geldige minimum voorraad is vereist",
+    "alertsHelpText": "Je krijgt waarschuwingen wanneer de voorraad onder dit niveau komt",
+    "addProduct": "Product toevoegen"
+  },
+  "categories": {
+    "vegetables": "Groenten",
+    "fruits": "Fruit",
+    "dairy": "Zuivelproducten",
+    "meat": "Vlees & Gevogelte",
+    "seafood": "Zeevruchten",
+    "drygoods": "Droge waren",
+    "oils": "Oliën & Azijns",
+    "herbs": "Kruiden & Specerijen",
+    "beverages": "Dranken",
+    "frozen": "Diepvries",
+    "other": "Overig"
+  },
+  "badges": {
+    "outOfStock": "UITVERKOCHT",
+    "urgent": "URGENT",
+    "low": "LAAG"
+  },
+  "modal": {
+    "editProduct": "Product Bewerken",
+    "editProductDescription": "Product informatie bijwerken",
+    "confirmDelete": "Weet je zeker dat je \"{name}\" wilt verwijderen? Deze actie kan niet ongedaan gemaakt worden."
+  },
+  "placeholder": {
+    "productName": "bijv. Verse tomaten",
+    "selectCategory": "Selecteer een categorie",
+    "selectUnit": "Selecteer een eenheid"
+  },
+  "help": {
+    "minimumStock": "Je krijgt waarschuwingen wanneer de voorraad onder dit niveau komt"
+  },
+  "validation": {
+    "nameRequired": "Productnaam is verplicht",
+    "quantityPositive": "Hoeveelheid moet een positief getal zijn",
+    "minStockPositive": "Minimum voorraad moet een positief getal zijn"
+  }
+}

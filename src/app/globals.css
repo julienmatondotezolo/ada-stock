@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components; 
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Ada Stock Colors - Green Primary */
+    --ada-stock-primary: #22c55e;
+    --ada-stock-primary-light: #4ade80;
+    --ada-blue: #4d6aff;
+    --ada-pink: '#ff66cc';
+    
+    /* Functional Colors */
+    --ada-success: #22c55e;
+    --ada-warning: #f59e0b;
+    --ada-error: #ef4444;
+    
+    /* Backgrounds */
+    --ada-bg-primary: #eff4f8;
+    --ada-bg-secondary: #ffffff;
+    --ada-bg-accent: #f8fafc;
+    
+    /* Text */
+    --ada-text-primary: #33373b;
+    --ada-text-secondary: #6b7280;
+    --ada-text-muted: #9ca3af;
+    
+    /* Spacing (8px grid) */
+    --ada-space-1: 0.25rem;
+    --ada-space-2: 0.5rem;
+    --ada-space-3: 0.75rem; 
+    --ada-space-4: 1rem;
+    --ada-space-6: 1.5rem;
+    --ada-space-8: 2rem;
+    --ada-space-12: 3rem;
+    --ada-space-16: 4rem;
+    
+    /* Border Radius */
+    --ada-radius-sm: 0.25rem;
+    --ada-radius-md: 0.5rem;
+    --ada-radius-lg: 0.75rem;
+    --ada-radius-xl: 1rem;
+  }
+
+  body {
+    background-color: var(--ada-bg-primary);
+    color: var(--ada-text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer components {
+  /* Ada Stock Button Styles - Green Primary */
+  .btn-stock-primary {
+    @apply bg-ada-success text-white px-6 py-3 rounded-ada-md font-medium hover:bg-green-600 transition-colors;
+    min-height: 44px; /* Touch target */
+  }
+  
+  .btn-stock-secondary {
+    @apply bg-ada-bg-secondary border border-ada-text-muted text-ada-text-primary px-6 py-3 rounded-ada-md font-medium hover:bg-ada-bg-accent transition-colors;
+    min-height: 44px;
+  }
+  
+  .btn-stock-danger {
+    @apply bg-ada-error text-white px-6 py-3 rounded-ada-md font-medium hover:bg-red-600 transition-colors;
+    min-height: 44px;
+  }
+  
+  .btn-stock-warning {
+    @apply bg-ada-warning text-white px-6 py-3 rounded-ada-md font-medium hover:bg-orange-600 transition-colors;
+    min-height: 44px;
+  }
+  
+  /* Ada Card Styles */
+  .card-stock {
+    @apply bg-ada-bg-secondary rounded-ada-lg p-ada-6 shadow-sm border border-gray-200;
+  }
+  
+  .card-stock-interactive {
+    @apply card-stock hover:shadow-md transition-shadow cursor-pointer border-2 border-transparent hover:border-ada-success;
+  }
+  
+  /* Stock Input Styles */
+  .input-stock {
+    @apply w-full px-4 py-3 rounded-ada-md border border-gray-300 bg-ada-bg-secondary text-ada-text-primary placeholder-ada-text-muted focus:outline-none focus:ring-2 focus:ring-ada-success focus:border-transparent;
+    min-height: 44px;
+  }
+  
+  /* Stock-specific components */
+  .stock-level-low {
+    @apply text-ada-error font-medium;
+  }
+  
+  .stock-level-medium {
+    @apply text-ada-warning font-medium;
+  }
+  
+  .stock-level-good {
+    @apply text-ada-success font-medium;
+  }
+  
+  .product-card {
+    @apply card-stock relative overflow-hidden;
+  }
+  
+  .product-card-urgent {
+    @apply border-l-4 border-ada-error bg-red-50;
+  }
+  
+  .product-card-warning {
+    @apply border-l-4 border-ada-warning bg-yellow-50;
+  }
+}
+
+@layer utilities {
+  /* Touch optimizations */
+  .touch-optimize {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Safe area for mobile */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  
+  /* Stock quantity badges */
+  .qty-badge {
+    @apply inline-flex items-center px-2 py-1 rounded-full text-ada-xs font-medium;
+  }
+  
+  .qty-badge-low {
+    @apply qty-badge bg-red-100 text-red-800;
+  }
+  
+  .qty-badge-medium {
+    @apply qty-badge bg-yellow-100 text-yellow-800;
+  }
+  
+  .qty-badge-good {
+    @apply qty-badge bg-green-100 text-green-800;
+  }
+  
+  /* Text truncation utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}

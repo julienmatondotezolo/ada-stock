@@ -1,0 +1,419 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e8]
+          - generic [ref=e12]:
+            - heading "AdaStock" [level=1] [ref=e13]
+            - paragraph [ref=e14]: L'Osteria Deerlijk
+        - generic [ref=e15]:
+          - button "🇳🇱" [ref=e17] [cursor=pointer]:
+            - img [ref=e18]
+            - generic [ref=e21]: 🇳🇱
+          - button [ref=e22] [cursor=pointer]:
+            - img [ref=e23]
+    - generic [ref=e26]:
+      - button "Dashboard" [ref=e27] [cursor=pointer]:
+        - generic [ref=e28]:
+          - img [ref=e29]
+          - generic [ref=e31]: Dashboard
+      - button "Producten (8)" [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]:
+          - img [ref=e34]
+          - generic [ref=e38]: Producten (8)
+    - main [ref=e39]:
+      - generic [ref=e41]:
+        - generic [ref=e42]: ⚠️
+        - generic [ref=e43]:
+          - heading "API Connection Issue" [level=3] [ref=e44]
+          - paragraph [ref=e45]: The string did not match the expected pattern.
+          - paragraph [ref=e46]: Using offline mode with sample data. Some features may be limited.
+          - button "Try Again" [ref=e47] [cursor=pointer]
+      - generic [ref=e48]:
+        - generic [ref=e50]:
+          - generic [ref=e52]:
+            - img [ref=e53]
+            - textbox "Zoek producten..." [ref=e56]
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - img [ref=e59]
+              - combobox [ref=e61]:
+                - option "Alle categorieën" [selected]
+                - option "Zuivelproducten"
+                - option "Droge waren"
+                - option "Kruiden & Specerijen"
+                - option "Oliën & Azijns"
+                - option "spices"
+                - option "Groenten"
+              - combobox [ref=e62]:
+                - option "Alle voorraad" [selected]
+                - option "Niet op voorraad"
+                - option "Lage voorraad"
+                - option "Voldoende voorraad"
+            - generic [ref=e63]:
+              - button "Lijst" [ref=e64] [cursor=pointer]:
+                - img [ref=e65]
+                - text: Lijst
+              - button "Kaarten" [ref=e66] [cursor=pointer]:
+                - img [ref=e67]
+                - text: Kaarten
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - img [ref=e73]
+                - generic [ref=e75]: "1"
+              - generic [ref=e76]: Niet op voorraad
+            - generic [ref=e77]:
+              - generic [ref=e78]:
+                - img [ref=e79]
+                - generic [ref=e82]: "4"
+              - generic [ref=e83]: Lage voorraad
+            - generic [ref=e84]:
+              - generic [ref=e85]:
+                - img [ref=e86]
+                - generic [ref=e89]: "3"
+              - generic [ref=e90]: Voldoende voorraad
+          - paragraph [ref=e92]: 8 producten weergegeven
+          - generic [ref=e93]:
+            - generic [ref=e94]:
+              - generic [ref=e95]:
+                - generic [ref=e96]:
+                  - img [ref=e97]
+                  - generic [ref=e99]: Niet op voorraad
+                - generic [ref=e101]: URGENT
+              - generic [ref=e102]:
+                - heading "Parmesan" [level=3] [ref=e103]
+                - paragraph [ref=e104]: Zuivelproducten
+              - generic [ref=e105]:
+                - generic [ref=e106]:
+                  - generic [ref=e107]: Huidige voorraad
+                  - generic [ref=e108]: "Min: 3"
+                - generic [ref=e110]: "0"
+              - generic [ref=e113]:
+                - generic [ref=e114]:
+                  - button "Verwijderen 1" [disabled] [ref=e115]:
+                    - img [ref=e116]
+                  - button "Aantal Bewerken" [ref=e117] [cursor=pointer]:
+                    - img [ref=e118]
+                  - button "Toevoegen 1" [ref=e120] [cursor=pointer]:
+                    - img [ref=e121]
+                - generic [ref=e122]:
+                  - button "-5" [disabled] [ref=e123]
+                  - button "-10" [disabled] [ref=e124]
+                  - button "+10" [ref=e125] [cursor=pointer]
+                - generic [ref=e126]:
+                  - button "Bewerken" [ref=e127] [cursor=pointer]:
+                    - img [ref=e128]
+                    - generic [ref=e130]: Bewerken
+                  - button "Verwijderen" [ref=e131] [cursor=pointer]:
+                    - img [ref=e132]
+                    - generic [ref=e135]: Verwijderen
+              - generic [ref=e137]: "Bijgewerkt: Feb 17 at 01:00 AM"
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - generic [ref=e140]:
+                  - img [ref=e141]
+                  - generic [ref=e144]: Lage voorraad
+                - generic [ref=e146]:
+                  - img [ref=e147]
+                  - text: LAAG
+              - generic [ref=e149]:
+                - heading "Bloem / Farine / Flour" [level=3] [ref=e150]
+                - paragraph [ref=e151]: Droge waren
+              - generic [ref=e152]:
+                - generic [ref=e153]:
+                  - generic [ref=e154]: Huidige voorraad
+                  - generic [ref=e155]: "Min: 20"
+                - generic [ref=e157]: "18"
+              - generic [ref=e161]:
+                - generic [ref=e162]:
+                  - button "Verwijderen 1" [ref=e163] [cursor=pointer]:
+                    - img [ref=e164]
+                  - button "Aantal Bewerken" [ref=e165] [cursor=pointer]:
+                    - img [ref=e166]
+                  - button "Toevoegen 1" [ref=e168] [cursor=pointer]:
+                    - img [ref=e169]
+                - generic [ref=e170]:
+                  - button "-5" [ref=e171] [cursor=pointer]
+                  - button "-10" [ref=e172] [cursor=pointer]
+                  - button "+10" [ref=e173] [cursor=pointer]
+                - generic [ref=e174]:
+                  - button "Bewerken" [ref=e175] [cursor=pointer]:
+                    - img [ref=e176]
+                    - generic [ref=e178]: Bewerken
+                  - button "Verwijderen" [ref=e179] [cursor=pointer]:
+                    - img [ref=e180]
+                    - generic [ref=e183]: Verwijderen
+              - generic [ref=e185]: "Bijgewerkt: Feb 16 at 01:00 AM"
+            - generic [ref=e186]:
+              - generic [ref=e187]:
+                - generic [ref=e188]:
+                  - img [ref=e189]
+                  - generic [ref=e192]: Lage voorraad
+                - generic [ref=e194]:
+                  - img [ref=e195]
+                  - text: LAAG
+              - generic [ref=e197]:
+                - heading "Olijfolie / Huile d'olive / Olive Oil" [level=3] [ref=e198]
+                - paragraph [ref=e199]: Oliën & Azijns
+              - generic [ref=e200]:
+                - generic [ref=e201]:
+                  - generic [ref=e202]: Huidige voorraad
+                  - generic [ref=e203]: "Min: 5"
+                - generic [ref=e205]: "2"
+              - generic [ref=e209]:
+                - generic [ref=e210]:
+                  - button "Verwijderen 1" [ref=e211] [cursor=pointer]:
+                    - img [ref=e212]
+                  - button "Aantal Bewerken" [ref=e213] [cursor=pointer]:
+                    - img [ref=e214]
+                  - button "Toevoegen 1" [ref=e216] [cursor=pointer]:
+                    - img [ref=e217]
+                - generic [ref=e218]:
+                  - button "-5" [disabled] [ref=e219]
+                  - button "-10" [disabled] [ref=e220]
+                  - button "+10" [ref=e221] [cursor=pointer]
+                - generic [ref=e222]:
+                  - button "Bewerken" [ref=e223] [cursor=pointer]:
+                    - img [ref=e224]
+                    - generic [ref=e226]: Bewerken
+                  - button "Verwijderen" [ref=e227] [cursor=pointer]:
+                    - img [ref=e228]
+                    - generic [ref=e231]: Verwijderen
+              - generic [ref=e233]: "Bijgewerkt: Feb 17 at 01:00 AM"
+            - generic [ref=e234]:
+              - generic [ref=e235]:
+                - generic [ref=e236]:
+                  - img [ref=e237]
+                  - generic [ref=e240]: Lage voorraad
+                - generic [ref=e242]:
+                  - img [ref=e243]
+                  - text: LAAG
+              - generic [ref=e245]:
+                - heading "Oregano" [level=3] [ref=e246]
+                - paragraph [ref=e247]: spices
+              - generic [ref=e248]:
+                - generic [ref=e249]:
+                  - generic [ref=e250]: Huidige voorraad
+                  - generic [ref=e251]: "Min: 5"
+                - generic [ref=e253]: "1"
+              - generic [ref=e257]:
+                - generic [ref=e258]:
+                  - button "Verwijderen 1" [ref=e259] [cursor=pointer]:
+                    - img [ref=e260]
+                  - button "Aantal Bewerken" [ref=e261] [cursor=pointer]:
+                    - img [ref=e262]
+                  - button "Toevoegen 1" [ref=e264] [cursor=pointer]:
+                    - img [ref=e265]
+                - generic [ref=e266]:
+                  - button "-5" [disabled] [ref=e267]
+                  - button "-10" [disabled] [ref=e268]
+                  - button "+10" [ref=e269] [cursor=pointer]
+                - generic [ref=e270]:
+                  - button "Bewerken" [ref=e271] [cursor=pointer]:
+                    - img [ref=e272]
+                    - generic [ref=e274]: Bewerken
+                  - button "Verwijderen" [ref=e275] [cursor=pointer]:
+                    - img [ref=e276]
+                    - generic [ref=e279]: Verwijderen
+              - generic [ref=e281]: "Bijgewerkt: Feb 16 at 01:00 AM"
+            - generic [ref=e282]:
+              - generic [ref=e283]:
+                - generic [ref=e284]:
+                  - img [ref=e285]
+                  - generic [ref=e288]: Lage voorraad
+                - generic [ref=e290]:
+                  - img [ref=e291]
+                  - text: LAAG
+              - generic [ref=e293]:
+                - heading "Tomaten / Tomates / Tomatoes" [level=3] [ref=e294]
+                - paragraph [ref=e295]: Groenten
+              - generic [ref=e296]:
+                - generic [ref=e297]:
+                  - generic [ref=e298]: Huidige voorraad
+                  - generic [ref=e299]: "Min: 10"
+                - generic [ref=e301]: "5"
+              - generic [ref=e305]:
+                - generic [ref=e306]:
+                  - button "Verwijderen 1" [ref=e307] [cursor=pointer]:
+                    - img [ref=e308]
+                  - button "Aantal Bewerken" [ref=e309] [cursor=pointer]:
+                    - img [ref=e310]
+                  - button "Toevoegen 1" [ref=e312] [cursor=pointer]:
+                    - img [ref=e313]
+                - generic [ref=e314]:
+                  - button "-5" [ref=e315] [cursor=pointer]
+                  - button "-10" [disabled] [ref=e316]
+                  - button "+10" [ref=e317] [cursor=pointer]
+                - generic [ref=e318]:
+                  - button "Bewerken" [ref=e319] [cursor=pointer]:
+                    - img [ref=e320]
+                    - generic [ref=e322]: Bewerken
+                  - button "Verwijderen" [ref=e323] [cursor=pointer]:
+                    - img [ref=e324]
+                    - generic [ref=e327]: Verwijderen
+              - generic [ref=e329]: "Bijgewerkt: Feb 17 at 01:00 AM"
+            - generic [ref=e330]:
+              - generic [ref=e332]:
+                - img [ref=e333]
+                - generic [ref=e336]: Voldoende voorraad
+              - generic [ref=e337]:
+                - heading "Basilicum / Basilic / Basil" [level=3] [ref=e338]
+                - paragraph [ref=e339]: Kruiden & Specerijen
+              - generic [ref=e340]:
+                - generic [ref=e341]:
+                  - generic [ref=e342]: Huidige voorraad
+                  - generic [ref=e343]: "Min: 8"
+                - generic [ref=e345]: "12"
+              - generic [ref=e349]:
+                - generic [ref=e350]:
+                  - button "Verwijderen 1" [ref=e351] [cursor=pointer]:
+                    - img [ref=e352]
+                  - button "Aantal Bewerken" [ref=e353] [cursor=pointer]:
+                    - img [ref=e354]
+                  - button "Toevoegen 1" [ref=e356] [cursor=pointer]:
+                    - img [ref=e357]
+                - generic [ref=e358]:
+                  - button "-5" [ref=e359] [cursor=pointer]
+                  - button "-10" [ref=e360] [cursor=pointer]
+                  - button "+10" [ref=e361] [cursor=pointer]
+                - generic [ref=e362]:
+                  - button "Bewerken" [ref=e363] [cursor=pointer]:
+                    - img [ref=e364]
+                    - generic [ref=e366]: Bewerken
+                  - button "Verwijderen" [ref=e367] [cursor=pointer]:
+                    - img [ref=e368]
+                    - generic [ref=e371]: Verwijderen
+              - generic [ref=e373]: "Bijgewerkt: Feb 17 at 01:00 AM"
+            - generic [ref=e374]:
+              - generic [ref=e376]:
+                - img [ref=e377]
+                - generic [ref=e380]: Voldoende voorraad
+              - generic [ref=e381]:
+                - heading "Mozzarella" [level=3] [ref=e382]
+                - paragraph [ref=e383]: Zuivelproducten
+              - generic [ref=e384]:
+                - generic [ref=e385]:
+                  - generic [ref=e386]: Huidige voorraad
+                  - generic [ref=e387]: "Min: 5"
+                - generic [ref=e389]: "8"
+              - generic [ref=e393]:
+                - generic [ref=e394]:
+                  - button "Verwijderen 1" [ref=e395] [cursor=pointer]:
+                    - img [ref=e396]
+                  - button "Aantal Bewerken" [ref=e397] [cursor=pointer]:
+                    - img [ref=e398]
+                  - button "Toevoegen 1" [ref=e400] [cursor=pointer]:
+                    - img [ref=e401]
+                - generic [ref=e402]:
+                  - button "-5" [ref=e403] [cursor=pointer]
+                  - button "-10" [disabled] [ref=e404]
+                  - button "+10" [ref=e405] [cursor=pointer]
+                - generic [ref=e406]:
+                  - button "Bewerken" [ref=e407] [cursor=pointer]:
+                    - img [ref=e408]
+                    - generic [ref=e410]: Bewerken
+                  - button "Verwijderen" [ref=e411] [cursor=pointer]:
+                    - img [ref=e412]
+                    - generic [ref=e415]: Verwijderen
+              - generic [ref=e417]: "Bijgewerkt: Feb 17 at 01:00 AM"
+            - generic [ref=e418]:
+              - generic [ref=e420]:
+                - img [ref=e421]
+                - generic [ref=e424]: Voldoende voorraad
+              - generic [ref=e425]:
+                - heading "Pasta" [level=3] [ref=e426]
+                - paragraph [ref=e427]: Droge waren
+              - generic [ref=e428]:
+                - generic [ref=e429]:
+                  - generic [ref=e430]: Huidige voorraad
+                  - generic [ref=e431]: "Min: 15"
+                - generic [ref=e433]: "25"
+              - generic [ref=e437]:
+                - generic [ref=e438]:
+                  - button "Verwijderen 1" [ref=e439] [cursor=pointer]:
+                    - img [ref=e440]
+                  - button "Aantal Bewerken" [ref=e441] [cursor=pointer]:
+                    - img [ref=e442]
+                  - button "Toevoegen 1" [ref=e444] [cursor=pointer]:
+                    - img [ref=e445]
+                - generic [ref=e446]:
+                  - button "-5" [ref=e447] [cursor=pointer]
+                  - button "-10" [ref=e448] [cursor=pointer]
+                  - button "+10" [ref=e449] [cursor=pointer]
+                - generic [ref=e450]:
+                  - button "Bewerken" [ref=e451] [cursor=pointer]:
+                    - img [ref=e452]
+                    - generic [ref=e454]: Bewerken
+                  - button "Verwijderen" [ref=e455] [cursor=pointer]:
+                    - img [ref=e456]
+                    - generic [ref=e459]: Verwijderen
+              - generic [ref=e461]: "Bijgewerkt: Feb 16 at 01:00 AM"
+    - generic [ref=e463]:
+      - generic [ref=e464]:
+        - generic [ref=e465]:
+          - img [ref=e467]
+          - heading "modal.addNewProduct" [level=2] [ref=e471]
+        - button [ref=e472] [cursor=pointer]:
+          - img [ref=e473]
+      - generic [ref=e476]:
+        - generic [ref=e477]:
+          - generic [ref=e478]: modal.productName *
+          - textbox "modal.productName *" [ref=e479]:
+            - /placeholder: modal.productNamePlaceholder
+        - generic [ref=e480]:
+          - generic [ref=e481]: Categorie *
+          - combobox "Categorie *" [ref=e482]:
+            - option "modal.selectCategory" [selected]
+            - option "Groenten"
+            - option "Fruit"
+            - option "Zuivelproducten"
+            - option "Vlees & Gevogelte"
+            - option "Zeevruchten"
+            - option "Droge waren"
+            - option "Oliën & Azijns"
+            - option "Kruiden & Specerijen"
+            - option "Dranken"
+            - option "Diepvries"
+            - option "Overig"
+        - generic [ref=e483]:
+          - generic [ref=e484]: modal.currentQuantity *
+          - spinbutton "modal.currentQuantity *" [ref=e485]
+        - generic [ref=e486]:
+          - generic [ref=e487]: modal.minStockLevel *
+          - spinbutton "modal.minStockLevel *" [ref=e488]
+          - paragraph [ref=e489]: modal.alertsHelpText
+        - generic [ref=e490]:
+          - generic [ref=e491]: Eenheid *
+          - combobox "Eenheid *" [ref=e492]:
+            - option "kg (kg)" [selected]
+            - option "g (g)"
+            - option "L (L)"
+            - option "ml (ml)"
+            - option "st (pcs)"
+            - option "bosje (bunch)"
+            - option "pak (pack)"
+            - option "fles (bottle)"
+            - option "blik (can)"
+            - option "doos (box)"
+        - generic [ref=e493]:
+          - button "Annuleren" [ref=e494] [cursor=pointer]
+          - button "modal.addProduct" [ref=e495] [cursor=pointer]
+  - generic [ref=e501] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e502]:
+      - img [ref=e503]
+    - generic [ref=e508]:
+      - button "Open issues overlay" [ref=e509]:
+        - generic [ref=e510]:
+          - generic [ref=e511]: "0"
+          - generic [ref=e512]: "1"
+        - generic [ref=e513]: Issue
+      - button "Collapse issues badge" [ref=e514]:
+        - img [ref=e515]
+  - alert [ref=e517]
+```

@@ -1,0 +1,164 @@
+{
+  "app": {
+    "title": "AdaStock",
+    "subtitle": "L'Osteria Deerlijk",
+    "addProduct": "Add Product",
+    "dashboard": "Dashboard",
+    "products": "Products"
+  },
+  "product": {
+    "name": "Product Name",
+    "category": "Category",
+    "quantity": "Quantity",
+    "minStock": "Min Stock",
+    "unit": "Unit",
+    "lastUpdated": "Last Updated",
+    "actions": "Actions",
+    "status": "Status",
+    "currentStock": "Current Stock",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "editQuantity": "Edit Quantity",
+    "editProduct": "Edit Product",
+    "deleteProduct": "Delete Product",
+    "updateProduct": "Update Product",
+    "delete": "Delete",
+    "add": "Add",
+    "remove": "Remove",
+    "increase": "Increase",
+    "decrease": "Decrease",
+    "clickToEdit": "Click to edit",
+    "minimumStock": "Minimum Stock"
+  },
+  "stock": {
+    "outOfStock": "Out of Stock",
+    "lowStock": "Low Stock",
+    "goodStock": "Good Stock",
+    "urgent": "URGENT",
+    "low": "LOW",
+    "good": "GOOD",
+    "out": "OUT"
+  },
+  "stats": {
+    "totalProducts": "Total Products",
+    "lowStockProducts": "Low Stock",
+    "outOfStockProducts": "Out of Stock",
+    "updatedToday": "Updated Today",
+    "showing": "Showing {count} products",
+    "showingFiltered": "Showing {filtered} of {total} products"
+  },
+  "search": {
+    "placeholder": "Search products...",
+    "noResults": "No products found",
+    "tryAdjusting": "Try adjusting your search criteria or filters.",
+    "clearFilters": "Clear all filters"
+  },
+  "filters": {
+    "allCategories": "All Categories",
+    "allStock": "All Stock",
+    "category": "Category",
+    "activeFilters": "Active filters:",
+    "search": "Search",
+    "clear": "Clear all"
+  },
+  "view": {
+    "list": "List",
+    "cards": "Cards",
+    "listView": "List view",
+    "cardView": "Card view"
+  },
+  "categories": {
+    "vegetables": "Vegetables",
+    "dairy": "Dairy",
+    "dryGoods": "Dry Goods",
+    "oils": "Oils",
+    "herbs": "Herbs",
+    "meat": "Meat",
+    "seafood": "Seafood",
+    "beverages": "Beverages",
+    "spices": "Spices"
+  },
+  "units": {
+    "kg": "kg",
+    "g": "g",
+    "L": "L",
+    "ml": "ml",
+    "pcs": "pcs",
+    "bunch": "bunch",
+    "pack": "pack",
+    "box": "box",
+    "bottle": "bottle",
+    "can": "can",
+    "piece": "piece",
+    "pieces": "pieces"
+  },
+  "alerts": {
+    "urgentAttention": "Urgent Attention Required",
+    "noProductsUpdated": "No products updated today",
+    "recentActivity": "Recent Activity"
+  },
+  "time": {
+    "today": "today",
+    "updated": "Updated",
+    "min": "Min"
+  },
+  "dashboard": {
+    "categoriesOverview": "Categories Overview",
+    "recentActivity": "Recent Activity",
+    "updatedToday": "Updated today",
+    "noProductsUpdated": "No products updated today",
+    "products": "products",
+    "more": "more..."
+  },
+  "modal": {
+    "addNewProduct": "Add New Product",
+    "productName": "Product Name",
+    "productNamePlaceholder": "e.g., Fresh Tomatoes",
+    "productNameRequired": "Product name is required",
+    "categoryRequired": "Category is required",
+    "selectCategory": "Select a category",
+    "currentQuantity": "Current Quantity",
+    "validQuantityRequired": "Valid quantity is required",
+    "minStockLevel": "Minimum Stock Level",
+    "validMinStockRequired": "Valid minimum stock is required",
+    "alertsHelpText": "You'll get alerts when stock falls below this level",
+    "addProduct": "Add Product"
+  },
+  "categories": {
+    "vegetables": "Vegetables",
+    "fruits": "Fruits",
+    "dairy": "Dairy",
+    "meat": "Meat & Poultry",
+    "seafood": "Seafood",
+    "drygoods": "Dry Goods",
+    "oils": "Oils & Vinegars",
+    "herbs": "Herbs & Spices",
+    "beverages": "Beverages",
+    "frozen": "Frozen",
+    "other": "Other"
+  },
+  "badges": {
+    "outOfStock": "OUT OF STOCK",
+    "urgent": "URGENT",
+    "low": "LOW"
+  },
+  "modal": {
+    "editProduct": "Edit Product",
+    "editProductDescription": "Update product information",
+    "confirmDelete": "Are you sure you want to delete \"{name}\"? This action cannot be undone."
+  },
+  "placeholder": {
+    "productName": "e.g., Fresh Tomatoes",
+    "selectCategory": "Select a category",
+    "selectUnit": "Select a unit"
+  },
+  "help": {
+    "minimumStock": "You'll get alerts when stock falls below this level"
+  },
+  "validation": {
+    "nameRequired": "Product name is required",
+    "quantityPositive": "Quantity must be a positive number",
+    "minStockPositive": "Minimum stock must be a positive number"
+  }
+}

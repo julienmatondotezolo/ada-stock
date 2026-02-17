@@ -1,0 +1,162 @@
+{
+  "app": {
+    "title": "AdaStock",
+    "subtitle": "L'Osteria Deerlijk",
+    "addProduct": "Ajouter Produit",
+    "dashboard": "Tableau de bord",
+    "products": "Produits"
+  },
+  "product": {
+    "name": "Nom du produit",
+    "category": "Catégorie",
+    "quantity": "Quantité",
+    "minStock": "Stock min",
+    "unit": "Unité",
+    "lastUpdated": "Dernière mise à jour",
+    "actions": "Actions",
+    "status": "Statut",
+    "currentStock": "Stock actuel",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "edit": "Modifier",
+    "editQuantity": "Modifier la quantité",
+    "editProduct": "Modifier le produit",
+    "deleteProduct": "Supprimer le produit",
+    "updateProduct": "Mettre à jour le produit",
+    "delete": "Supprimer",
+    "add": "Ajouter",
+    "remove": "Retirer",
+    "increase": "Augmenter",
+    "decrease": "Diminuer",
+    "clickToEdit": "Cliquer pour modifier",
+    "minimumStock": "Stock minimum"
+  },
+  "stock": {
+    "outOfStock": "Rupture de stock",
+    "lowStock": "Stock faible",
+    "goodStock": "Stock suffisant",
+    "urgent": "URGENT",
+    "low": "FAIBLE",
+    "good": "BON",
+    "out": "VIDE"
+  },
+  "stats": {
+    "totalProducts": "Total produits",
+    "lowStockProducts": "Stock faible",
+    "outOfStockProducts": "Rupture",
+    "updatedToday": "Mis à jour aujourd'hui",
+    "showing": "Affichage de {count} produits",
+    "showingFiltered": "Affichage de {filtered} sur {total} produits"
+  },
+  "search": {
+    "placeholder": "Rechercher des produits...",
+    "noResults": "Aucun produit trouvé",
+    "tryAdjusting": "Essayez d'ajuster vos critères de recherche ou filtres.",
+    "clearFilters": "Effacer tous les filtres"
+  },
+  "filters": {
+    "allCategories": "Toutes catégories",
+    "allStock": "Tout stock",
+    "category": "Catégorie",
+    "activeFilters": "Filtres actifs :",
+    "search": "Recherche",
+    "clear": "Tout effacer"
+  },
+  "view": {
+    "list": "Liste",
+    "cards": "Cartes",
+    "listView": "Vue liste",
+    "cardView": "Vue cartes"
+  },
+  "categories": {
+    "vegetables": "Légumes",
+    "dairy": "Produits laitiers",
+    "dryGoods": "Produits secs",
+    "oils": "Huiles",
+    "herbs": "Herbes",
+    "meat": "Viande",
+    "seafood": "Fruits de mer",
+    "beverages": "Boissons",
+    "spices": "Épices"
+  },
+  "units": {
+    "kg": "kg",
+    "g": "g", 
+    "L": "L",
+    "ml": "ml",
+    "pcs": "pcs",
+    "bunch": "botte",
+    "pack": "paquet", 
+    "box": "boîte",
+    "bottle": "bouteille",
+    "can": "canette",
+    "piece": "pièce",
+    "pieces": "pièces"
+  },
+  "alerts": {
+    "urgentAttention": "Attention urgente requise",
+    "noProductsUpdated": "Aucun produit mis à jour aujourd'hui",
+    "recentActivity": "Activité récente"
+  },
+  "time": {
+    "today": "aujourd'hui",
+    "updated": "Mis à jour",
+    "min": "Min"
+  },
+  "dashboard": {
+    "categoriesOverview": "Aperçu des catégories",
+    "recentActivity": "Activité récente",
+    "updatedToday": "Mis à jour aujourd'hui",
+    "noProductsUpdated": "Aucun produit mis à jour aujourd'hui",
+    "products": "produits",
+    "more": "plus..."
+  },
+  "modal": {
+    "addNewProduct": "Ajouter nouveau produit",
+    "productName": "Nom du produit",
+    "productNamePlaceholder": "ex: Tomates fraîches",
+    "productNameRequired": "Le nom du produit est requis",
+    "categoryRequired": "La catégorie est requise",
+    "selectCategory": "Sélectionner une catégorie",
+    "currentQuantity": "Quantité actuelle",
+    "validQuantityRequired": "Une quantité valide est requise",
+    "minStockLevel": "Niveau de stock minimum",
+    "validMinStockRequired": "Un stock minimum valide est requis",
+    "alertsHelpText": "Vous recevrez des alertes quand le stock tombe en dessous de ce niveau",
+    "addProduct": "Ajouter produit",
+    "editProduct": "Modifier le produit",
+    "editProductDescription": "Mettre à jour les informations du produit",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer \"{name}\" ? Cette action ne peut pas être annulée."
+  },
+  "categoryNames": {
+    "vegetables": "Légumes",
+    "fruits": "Fruits",
+    "dairy": "Produits laitiers",
+    "meat": "Viande & Volaille",
+    "seafood": "Fruits de mer",
+    "drygoods": "Produits secs",
+    "oils": "Huiles & Vinaigres",
+    "herbs": "Herbes & Épices",
+    "beverages": "Boissons",
+    "frozen": "Surgelés",
+    "other": "Autre"
+  },
+  "badges": {
+    "outOfStock": "RUPTURE",
+    "urgent": "URGENT",
+    "low": "FAIBLE"
+  },
+  "placeholder": {
+    "productName": "ex. Tomates fraîches",
+    "selectCategory": "Sélectionner une catégorie",
+    "selectUnit": "Sélectionner une unité"
+  },
+  "help": {
+    "minimumStock": "Vous recevrez des alertes lorsque le stock descendra en dessous de ce niveau"
+  },
+  "validation": {
+    "nameRequired": "Le nom du produit est requis",
+    "quantityPositive": "La quantité doit être un nombre positif",
+    "minStockPositive": "Le stock minimum doit être un nombre positif"
+  }
+}
