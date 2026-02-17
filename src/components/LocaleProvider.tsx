@@ -23,7 +23,7 @@ interface LocaleContextType {
 const LocaleContext = createContext<LocaleContextType | undefined>(undefined)
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>('nl')
+  const [locale, setLocaleState] = useState<Locale>('fr')
 
   useEffect(() => {
     // Get locale from cookie on mount

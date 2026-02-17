@@ -3,7 +3,7 @@ export type Locale = (typeof locales)[number]
 
 // Simple function to get locale from cookie or default
 export function getLocale(): Locale {
-  if (typeof window === 'undefined') return 'nl'
+  if (typeof window === 'undefined') return 'fr'
   
   const cookies = document.cookie.split(';')
   const localeCookie = cookies.find(c => c.trim().startsWith('locale='))
@@ -13,5 +13,5 @@ export function getLocale(): Locale {
     return locale as Locale
   }
   
-  return 'nl' // Default to Dutch for L'Osteria
+  return 'fr' // Default to French for L'Osteria
 }
