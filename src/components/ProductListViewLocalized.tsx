@@ -222,16 +222,6 @@ export function ProductListView({ products, onUpdateQuantity, onUpdateProduct, o
                         </div>
                       ) : (
                         <div className="flex items-center justify-center space-x-1">
-                          {/* Quick decrease by 5 */}
-                          <button
-                            onClick={() => handleQuickUpdate(product, -5)}
-                            disabled={product.quantity < 5}
-                            className="p-1 text-red-600 hover:text-red-700 hover:bg-red-50 rounded text-xs font-bold min-w-[32px] min-h-[32px] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
-                            title={t('product.decrease') + ' 5'}
-                          >
-                            -5
-                          </button>
-
                           {/* Quick decrease by 1 */}
                           <button
                             onClick={() => handleQuickUpdate(product, -1)}
@@ -259,14 +249,6 @@ export function ProductListView({ products, onUpdateQuantity, onUpdateProduct, o
                           >
                             <Plus size={16} />
                           </button>
-
-                          {/* Quick increase by 5 */}
-                          <button
-                            onClick={() => handleQuickUpdate(product, 5)}
-                            className="p-1 text-ada-success hover:text-green-700 hover:bg-green-50 rounded text-xs font-bold min-w-[32px] min-h-[32px] flex items-center justify-center"
-                            title={t('product.increase') + ' 5'}
-                          >
-                            +5
                           </button>
 
                           {/* Edit Product */}

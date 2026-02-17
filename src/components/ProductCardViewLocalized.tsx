@@ -310,34 +310,7 @@ export function ProductCardView({ products, onUpdateQuantity, onUpdateProduct, o
                       </button>
                     </div>
 
-                    {/* Quick increment buttons */}
-                    <div className="grid grid-cols-3 gap-2">
-                      <button
-                        onClick={() => handleQuickUpdate(product, -5)}
-                        disabled={product.quantity < 5}
-                        className="p-3 bg-red-50 hover:bg-red-100 border border-red-200 text-red-700 rounded-lg text-lg font-bold min-h-[48px] disabled:opacity-50 disabled:cursor-not-allowed"
-                        title={t('product.remove') + ' 5'}
-                      >
-                        -5
-                      </button>
-                      
-                      <button
-                        onClick={() => handleQuickUpdate(product, -10)}
-                        disabled={product.quantity < 10}
-                        className="p-3 bg-red-50 hover:bg-red-100 border border-red-200 text-red-700 rounded-lg text-lg font-bold min-h-[48px] disabled:opacity-50 disabled:cursor-not-allowed"
-                        title={t('product.remove') + ' 10'}
-                      >
-                        -10
-                      </button>
-                      
-                      <button
-                        onClick={() => handleQuickUpdate(product, 10)}
-                        className="p-3 bg-green-100 hover:bg-green-200 border border-green-300 text-green-700 rounded-lg text-lg font-bold min-h-[48px]"
-                        title={t('product.add') + ' 10'}
-                      >
-                        +10
-                      </button>
-                    </div>
+                    {/* Quick increment buttons removed - only single increment/decrement available via main buttons */}
 
                     {/* Edit & Delete actions */}
                     <div className="grid grid-cols-2 gap-2">
