@@ -4,8 +4,8 @@
 
 AdaStock now supports **3 languages** with complete translations:
 
-- **🇳🇱 Dutch (Nederlands)** - Default language for L'Osteria
-- **🇫🇷 French (Français)** - For French-speaking staff
+- **🇫🇷 French (Français)** - Default language for L'Osteria
+- **🇳🇱 Dutch (Nederlands)** - For Dutch-speaking staff
 - **🇬🇧 English** - International fallback
 
 ## 🔄 Language Switching
@@ -70,7 +70,7 @@ Sample products now include **trilingual names**:
 ### **Custom Locale System**
 - **Cookie-based** language persistence
 - **Client-side switching** for instant updates
-- **Fallback support** (Dutch → English if translation missing)
+- **Fallback support** (French → English if translation missing)
 - **Parameter interpolation** for dynamic text
 
 ### **Translation Structure**
@@ -103,8 +103,8 @@ src/messages/
 ## 🎯 Perfect for L'Osteria
 
 ### **Staff Training**
-- **Dutch default** for Belgian staff
-- **French support** for French-speaking employees
+- **French default** for L'Osteria staff
+- **Dutch support** for Dutch-speaking employees
 - **Visual icons** reduce language barriers
 
 ### **Business Benefits**

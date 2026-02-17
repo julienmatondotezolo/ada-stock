@@ -1,11 +1,11 @@
 # AdaStock Frontend
 
-Complete PWA stock management application for L'Osteria restaurant with multilingual support (Dutch/French/English) and real-time inventory tracking.
+Complete PWA stock management application for L'Osteria restaurant with multilingual support (French/Dutch/English) and real-time inventory tracking.
 
 ## Features
 
 - 📱 **Progressive Web App (PWA)** - Works offline, installable on mobile devices
-- 🌍 **Multilingual** - Dutch (default), French, English with complete translations
+- 🌍 **Multilingual** - French (default), Dutch, English with complete translations
 - 📊 **Real-time Dashboard** - Live stock status, alerts, and category overviews
 - 🔍 **Smart Search & Filtering** - Find products quickly with advanced filters
 - ⚡ **Quick Actions** - -5/-1/Edit/+1/+5 quantity controls for efficient management
