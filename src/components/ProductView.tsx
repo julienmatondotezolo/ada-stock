@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Search, Filter } from 'lucide-react'
+import { Search, Filter, ArrowUpDown } from 'lucide-react'
 import { ProductListView } from './ProductListViewLocalized'
 import { ProductCardView } from './ProductCardViewLocalized'
 import { ViewToggle, ViewMode } from './ViewToggle'
@@ -32,6 +32,7 @@ export function ProductView({ products, onUpdateQuantity, onUpdateProduct, onDel
   const [stockFilter, setStockFilter] = useState<string>('all')
   const [isEditing, setIsEditing] = useState(false)
   const [editingTimeout, setEditingTimeout] = useState<NodeJS.Timeout | null>(null)
+  const [autoSortEnabled, setAutoSortEnabled] = useState(true)
   const { t } = useLocale()
 
   // Get unique categories
@@ -61,11 +62,11 @@ export function ProductView({ products, onUpdateQuantity, onUpdateProduct, onDel
     return matchesSearch && matchesCategory && matchesStock
   })
 
-  // Stable sorting: maintain order during editing to prevent jumping
-  const sortedProducts = isEditing ? 
-    // During editing: keep current order stable
+  // Stable sorting: maintain order during editing or when auto-sort is disabled
+  const sortedProducts = (isEditing || !autoSortEnabled) ? 
+    // During editing or auto-sort disabled: keep current order stable
     filteredProducts :
-    // When not editing: sort by priority
+    // When not editing and auto-sort enabled: sort by priority
     filteredProducts.sort((a, b) => {
       const getStatusPriority = (product: Product) => {
         if (product.quantity === 0) return 0 // Out of stock first
@@ -97,7 +98,7 @@ export function ProductView({ products, onUpdateQuantity, onUpdateProduct, onDel
     // Set new timeout to reset editing state after user stops interacting
     const timeout = setTimeout(() => {
       setIsEditing(false)
-    }, 2000) // 2 seconds after last interaction
+    }, 30000) // 30 seconds after last interaction
     
     setEditingTimeout(timeout)
     
@@ -158,6 +159,22 @@ export function ProductView({ products, onUpdateQuantity, onUpdateProduct, onDel
                 <option value="good">{t('stock.goodStock')}</option>
               </select>
             </div>
+
+            {/* Auto-Sort Toggle */}
+            <button
+              onClick={() => setAutoSortEnabled(!autoSortEnabled)}
+              className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-colors ${
+                autoSortEnabled
+                  ? 'bg-ada-success border-ada-success text-white'
+                  : 'bg-white border-gray-300 text-ada-text-primary hover:bg-gray-50'
+              }`}
+              title={autoSortEnabled ? t('sorting.disableAutoSort') : t('sorting.enableAutoSort')}
+            >
+              <ArrowUpDown size={16} />
+              <span className="text-ada-sm hidden sm:inline">
+                {autoSortEnabled ? t('sorting.sortOn') : t('sorting.sortOff')}
+              </span>
+            </button>
 
             {/* View Toggle */}
             <ViewToggle

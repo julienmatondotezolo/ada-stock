@@ -160,5 +160,11 @@
     "nameRequired": "Product name is required",
     "quantityPositive": "Quantity must be a positive number",
     "minStockPositive": "Minimum stock must be a positive number"
+  },
+  "sorting": {
+    "sortOn": "Auto Sort",
+    "sortOff": "Fixed Order",
+    "enableAutoSort": "Enable automatic priority sorting",
+    "disableAutoSort": "Disable automatic sorting (stable order)"
   }
 }

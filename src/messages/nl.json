@@ -160,5 +160,11 @@
     "nameRequired": "Productnaam is verplicht",
     "quantityPositive": "Hoeveelheid moet een positief getal zijn",
     "minStockPositive": "Minimum voorraad moet een positief getal zijn"
+  },
+  "sorting": {
+    "sortOn": "Auto sorteren",
+    "sortOff": "Vaste volgorde",
+    "enableAutoSort": "Automatisch sorteren op prioriteit inschakelen",
+    "disableAutoSort": "Automatisch sorteren uitschakelen (vaste volgorde)"
   }
 }

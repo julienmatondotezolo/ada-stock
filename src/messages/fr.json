@@ -158,5 +158,11 @@
     "nameRequired": "Le nom du produit est requis",
     "quantityPositive": "La quantité doit être un nombre positif",
     "minStockPositive": "Le stock minimum doit être un nombre positif"
+  },
+  "sorting": {
+    "sortOn": "Tri auto",
+    "sortOff": "Tri fixe",
+    "enableAutoSort": "Activer le tri automatique par priorité",
+    "disableAutoSort": "Désactiver le tri automatique (ordre stable)"
   }
 }
