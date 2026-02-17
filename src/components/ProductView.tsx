@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Search, Filter } from 'lucide-react'
 import { ProductListView } from './ProductListViewLocalized'
 import { ProductCardView } from './ProductCardViewLocalized'
@@ -8,7 +8,7 @@ import { ViewToggle, ViewMode } from './ViewToggle'
 import { useLocale } from './LocaleProvider'
 
 interface Product {
-  id: string
+  id: number
   name: string
   category: string
   quantity: number
@@ -19,9 +19,9 @@ interface Product {
 
 interface ProductViewProps {
   products: Product[]
-  onUpdateQuantity: (id: string, newQuantity: number) => void
-  onUpdateProduct: (id: string, updatedProduct: Partial<Product>) => void
-  onDeleteProduct: (id: string) => void
+  onUpdateQuantity: (id: number, newQuantity: number) => void
+  onUpdateProduct: (id: number, updatedProduct: Partial<Product>) => void
+  onDeleteProduct: (id: number) => void
   className?: string
 }
 
@@ -30,10 +30,21 @@ export function ProductView({ products, onUpdateQuantity, onUpdateProduct, onDel
   const [searchQuery, setSearchQuery] = useState('')
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
   const [stockFilter, setStockFilter] = useState<string>('all')
+  const [isEditing, setIsEditing] = useState(false)
+  const [editingTimeout, setEditingTimeout] = useState<NodeJS.Timeout | null>(null)
   const { t } = useLocale()
 
   // Get unique categories
   const categories = Array.from(new Set(products.map(p => p.category))).sort()
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (editingTimeout) {
+        clearTimeout(editingTimeout)
+      }
+    }
+  }, [editingTimeout])
 
   // Filter products based on search and filters
   const filteredProducts = products.filter(product => {
@@ -50,24 +61,49 @@ export function ProductView({ products, onUpdateQuantity, onUpdateProduct, onDel
     return matchesSearch && matchesCategory && matchesStock
   })
 
-  // Sort products by stock status (out of stock first, then low stock)
-  const sortedProducts = filteredProducts.sort((a, b) => {
-    const getStatusPriority = (product: Product) => {
-      if (product.quantity === 0) return 0 // Out of stock first
-      if (product.quantity <= product.minStock) return 1 // Low stock second
-      return 2 // Good stock last
+  // Stable sorting: maintain order during editing to prevent jumping
+  const sortedProducts = isEditing ? 
+    // During editing: keep current order stable
+    filteredProducts :
+    // When not editing: sort by priority
+    filteredProducts.sort((a, b) => {
+      const getStatusPriority = (product: Product) => {
+        if (product.quantity === 0) return 0 // Out of stock first
+        if (product.quantity <= product.minStock) return 1 // Low stock second
+        return 2 // Good stock last
+      }
+      
+      const aPriority = getStatusPriority(a)
+      const bPriority = getStatusPriority(b)
+      
+      if (aPriority !== bPriority) {
+        return aPriority - bPriority
+      }
+      
+      // Within same priority, sort by name
+      return a.name.localeCompare(b.name)
+    })
+
+  // Handle quantity updates with editing state management
+  const handleUpdateQuantity = (id: number, newQuantity: number) => {
+    // Set editing state to prevent re-sorting
+    setIsEditing(true)
+    
+    // Clear existing timeout
+    if (editingTimeout) {
+      clearTimeout(editingTimeout)
     }
     
-    const aPriority = getStatusPriority(a)
-    const bPriority = getStatusPriority(b)
+    // Set new timeout to reset editing state after user stops interacting
+    const timeout = setTimeout(() => {
+      setIsEditing(false)
+    }, 2000) // 2 seconds after last interaction
     
-    if (aPriority !== bPriority) {
-      return aPriority - bPriority
-    }
+    setEditingTimeout(timeout)
     
-    // Within same priority, sort by name
-    return a.name.localeCompare(b.name)
-  })
+    // Call the original update function
+    onUpdateQuantity(id, newQuantity)
+  }
 
   return (
     <div className={`space-y-6 ${className}`}>
@@ -206,14 +242,14 @@ export function ProductView({ products, onUpdateQuantity, onUpdateProduct, onDel
       {currentView === 'list' ? (
         <ProductListView
           products={sortedProducts}
-          onUpdateQuantity={onUpdateQuantity}
+          onUpdateQuantity={handleUpdateQuantity}
           onUpdateProduct={onUpdateProduct}
           onDeleteProduct={onDeleteProduct}
         />
       ) : (
         <ProductCardView
           products={sortedProducts}
-          onUpdateQuantity={onUpdateQuantity}
+          onUpdateQuantity={handleUpdateQuantity}
           onUpdateProduct={onUpdateProduct}
           onDeleteProduct={onDeleteProduct}
         />
