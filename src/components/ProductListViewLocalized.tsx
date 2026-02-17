@@ -249,7 +249,6 @@ export function ProductListView({ products, onUpdateQuantity, onUpdateProduct, o
                           >
                             <Plus size={16} />
                           </button>
-                          </button>
 
                           {/* Edit Product */}
                           <button
