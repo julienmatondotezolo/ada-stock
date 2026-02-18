@@ -34,18 +34,18 @@ export default function SimpleStockPage() {
       const product = products.find(p => p.id === productId)
       if (!product) return
 
-      const newQuantity = Math.max(0, product.quantity + change)
+      const newQuantity = Math.max(0, (product.current_quantity || 0) + change)
       
       await apiService.updateProduct(productId, {
         ...product,
-        quantity: newQuantity
+        current_quantity: newQuantity
       })
 
       // Update local state
       setProducts(prev => 
         prev.map(p => 
           p.id === productId 
-            ? { ...p, quantity: newQuantity }
+            ? { ...p, current_quantity: newQuantity }
             : p
         )
       )
@@ -113,9 +113,11 @@ export default function SimpleStockPage() {
                     {product.name}
                   </h3>
                   <div className="flex items-center space-x-4 mt-1">
-                    <span className="text-sm text-gray-500">{product.category}</span>
+                    <span className="text-sm text-gray-500">
+                      {product.category?.name || 'Sans catégorie'}
+                    </span>
                     <span className="text-sm text-gray-500">{product.unit}</span>
-                    {product.quantity <= product.minStock && (
+                    {(product.current_quantity || 0) <= (product.minimum_stock || 0) && (
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
                         Stock faible
                       </span>
@@ -127,7 +129,7 @@ export default function SimpleStockPage() {
                 <div className="flex items-center space-x-4">
                   <button
                     onClick={() => updateQuantity(product.id, -1)}
-                    disabled={product.quantity === 0}
+                    disabled={(product.current_quantity || 0) === 0}
                     className="w-10 h-10 rounded-full bg-red-100 hover:bg-red-200 disabled:bg-gray-100 disabled:cursor-not-allowed flex items-center justify-center transition-colors"
                   >
                     <Minus className="h-5 w-5 text-red-600 disabled:text-gray-400" />
@@ -135,7 +137,7 @@ export default function SimpleStockPage() {
 
                   <div className="text-center min-w-[60px]">
                     <div className="text-2xl font-bold text-gray-900">
-                      {product.quantity}
+                      {product.current_quantity || 0}
                     </div>
                     <div className="text-xs text-gray-500">
                       {product.unit}
