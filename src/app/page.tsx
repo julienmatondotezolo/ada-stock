@@ -14,6 +14,7 @@ export default function SimpleStockPage() {
   const [stockFilter, setStockFilter] = useState('')
   const [editingProduct, setEditingProduct] = useState<Product | null>(null)
   const [showEditDialog, setShowEditDialog] = useState(false)
+  const [selectedProductId, setSelectedProductId] = useState<string | null>(null)
 
   // Load products from API
   useEffect(() => {
@@ -100,7 +101,17 @@ export default function SimpleStockPage() {
     }
   }
 
-  const handleProductClick = (product: Product) => {
+  const handleCardClick = (product: Product) => {
+    // Toggle selection - if already selected, deselect it
+    if (selectedProductId === product.id) {
+      setSelectedProductId(null)
+    } else {
+      setSelectedProductId(product.id)
+    }
+  }
+
+  const handleEditClick = (product: Product, e: React.MouseEvent) => {
+    e.stopPropagation()
     setEditingProduct({ ...product })
     setShowEditDialog(true)
   }
@@ -117,6 +128,7 @@ export default function SimpleStockPage() {
       )
       setShowEditDialog(false)
       setEditingProduct(null)
+      setSelectedProductId(null)
     } catch (err) {
       console.error('Failed to update product:', err)
       alert('Erreur lors de la mise à jour du produit')
@@ -132,6 +144,7 @@ export default function SimpleStockPage() {
         setProducts(prev => prev.filter(p => p.id !== editingProduct.id))
         setShowEditDialog(false)
         setEditingProduct(null)
+        setSelectedProductId(null)
       } catch (err) {
         console.error('Failed to delete product:', err)
         alert('Erreur lors de la suppression du produit')
@@ -240,9 +253,19 @@ export default function SimpleStockPage() {
           {filteredProducts.map((product) => (
             <div 
               key={product.id} 
-              className={`rounded-lg shadow-sm border-2 p-4 cursor-pointer transition-all hover:shadow-md ${getCardColor(product)}`}
-              onClick={() => handleProductClick(product)}
+              className={`relative rounded-lg shadow-sm border-2 p-4 cursor-pointer transition-all hover:shadow-md ${getCardColor(product)} ${selectedProductId === product.id ? 'ring-2 ring-blue-400' : ''}`}
+              onClick={() => handleCardClick(product)}
             >
+              {/* Edit Button - appears when card is selected */}
+              {selectedProductId === product.id && (
+                <button
+                  onClick={(e) => handleEditClick(product, e)}
+                  className="absolute top-3 right-3 w-8 h-8 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center transition-colors shadow-lg"
+                >
+                  <Edit2 className="h-4 w-4" />
+                </button>
+              )}
+
               <div className="flex items-center justify-between">
                 {/* Product Info */}
                 <div className="flex-1">
